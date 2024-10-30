@@ -1,0 +1,66 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2820
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh14860\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 USAGE NOTE:\expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+
+\f1\i \
+Code 1:\
+python3 clean_vrf_route.py <input_file>
+\f0\i0 \
+\
+\
+Note: Replace 
+\fs26 <input_file>
+\fs24  with the path to the file you want to process. The subnets will be saved to 
+\fs26 proposed-pool.txt
+\fs24 . If 
+\fs26 proposed-pool.txt
+\fs24  already exists, the script will show an error and stop without overwriting it.\kerning1\expnd0\expndtw0 \
+\expnd0\expndtw0\kerning0
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 \kerning1\expnd0\expndtw0 \
+Code 2:\
+python3 new_IP_pool.py nooverlap\
+python3 new_IP_pool.py overlap\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+Note: The script will generate 
+\fs26 no-overlap-proposed-pool.txt
+\fs24  for \'93
+\fs26 nooverlap\'94
+\fs24  mode and 
+\fs26 overlapped-subnets.txt
+\fs24  for \'93
+\fs26 overlap\'94
+\fs24  mode. Each file will contain the relevant IPs from 
+\fs26 proposed-pool.txt
+\fs24 , listed by their full four octets.\
+\
+\
+Code 3:\
+\pard\pardeftab720\partightenfactor0
+
+\f1\i \cf0 \kerning1\expnd0\expndtw0 python3 summery_proposed_pool.py <input_file>
+\f0\i0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+Note: Replace 
+\fs26 <input_file>
+\fs24  with the path to the file containing the IP addresses. The results will be saved to summery-
+\fs26 proposed-pool.txt
+\fs24 , with comments indicating duplicate counts where applicable.\
+}
